@@ -1,5 +1,6 @@
 use tabela_enferujeda_rpg::rune;
 
 fn main() {
-    rune::rune();
+    let runes = rune::all_runes().join(", ");
+    println!("{}", runes);
 }
