@@ -24,3 +24,11 @@ fn rune_full_path(rune_name: String) -> String {
 pub fn rune_decoder(rune_name: String) -> String {
     pdf_extract::extract_text(rune_full_path(rune_name)).unwrap()
 }
+
+pub fn swap_pdf_txt(file_name: String) -> String {
+    file_name.replace(".pdf", ".txt")
+}
+
+pub fn decod_save(file_name: String, file_content: String) {
+    fs::write(rune_full_path(file_name), file_content).unwrap();
+}
